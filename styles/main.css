@@ -41,6 +41,19 @@ body {
     padding: 0 80px;
 }
 
+/* Responsive Breakpoints */
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 40px;
@@ -50,6 +63,18 @@ body {
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 12px;
     }
 }
 
@@ -3489,18 +3514,18 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Mobile Styles for 375px width - Based on Figma Design */
-@media (max-width: 375px) {
+/* Mobile Styles - Improved Responsive Design */
+@media (max-width: 480px) {
     html, body {
-        width: 375px;
-        max-width: 375px;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
         overflow-x: hidden;
     }
 
     .container {
         padding: 0 16px;
-        max-width: 375px;
+        max-width: 100%;
         width: 100%;
     }
 
