@@ -3717,12 +3717,8 @@ html {
     }
 }
 
-/* Styles for 400px - same as 375px, applied to 400px and below */
+/* Styles for 400px - same as 375px */
 @media (max-width: 400px) {
-    /* All styles from 480px block are already applied via inheritance */
-}
-
-@media (max-width: 480px) {
     html, body {
         width: 100%;
         max-width: 100%;
