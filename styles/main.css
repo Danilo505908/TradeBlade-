@@ -5948,3 +5948,163 @@ html {
     }
 }
 
+/* iPhone 16 Pro Optimizations (393px width) */
+@media (max-width: 393px) {
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+        padding: 0 16px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Safe area insets for iPhone notch/Dynamic Island */
+    .header {
+        padding-top: env(safe-area-inset-top);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .navbar .container {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-field {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Override fixed widths for iPhone 16 Pro */
+    .hero-title,
+    .hero-description,
+    .hero-form,
+    .form-field,
+    .form-note {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Ensure images don't overflow */
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix any elements with 343px or 375px fixed width */
+    *[style*="width: 343px"],
+    *[style*="width: 375px"],
+    *[style*="max-width: 343px"],
+    *[style*="max-width: 375px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: calc(100% - 32px);
+        max-width: calc(100% - 32px);
+        margin: 20px auto;
+        padding: 24px 20px;
+        max-height: calc(100vh - 40px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        overflow-y: auto;
+    }
+
+    /* Footer safe area */
+    .footer {
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    /* Fix for any horizontal scrolling */
+    * {
+        max-width: 100%;
+    }
+
+    /* Button touch targets - minimum 44px for iOS */
+    .btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    /* Navigation menu safe area */
+    .mobile-menu-modal {
+        padding-top: calc(52px + env(safe-area-inset-top));
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    /* Deal cards */
+    .deal-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Tariff cards */
+    .tariff-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Review cards */
+    .review-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* iPhone 16 Pro specific - Portrait orientation */
+@media (min-width: 393px) and (max-width: 393px) and (orientation: portrait) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* iPhone safe area support for all iOS devices */
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+
+    .footer {
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+}
+
